@@ -1,219 +1,212 @@
 <template>
-  <div class="login-container">
-    <div class="login-card">
-      <h1 class="login-title">Login</h1>
-      
-      <form @submit.prevent="handleSubmit" class="login-form">
-        <div class="form-group">
-          <label for="username">Username</label>
-          <input
-            v-model.trim="username"
-            type="text"
-            id="username"
-            required
-            autocomplete="username"
-            placeholder="Enter your username"
-          >
+  <div class="login-box">
+    <div class="form-content">
+      <div class="camera-icon-container">
+        <div class="camera-icon-circle">
+          <i class="fas fa-camera camera-icon"></i>
         </div>
-        
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input
-            v-model.trim="password"
-            type="password"
-            id="password"
-            required
-            autocomplete="current-password"
-            placeholder="••••••••"
-          >
-        </div>
-        
-        <div class="form-options">
-          <div class="remember-me">
-            <input
-              v-model="rememberMe"
-              type="checkbox"
-              id="rememberMe"
-            >
-            <label for="rememberMe">Remember me</label>
-          </div>
-          <a href="#" class="forgot-password" @click.prevent="$emit('forgot-password')">
-            Forgot password?
-          </a>
-        </div>
-        
-        <button type="submit" class="login-button">
-          Login
-        </button>
-      </form>
-      
-      <div class="register-link">
-        Don't have an account? 
-        <a href="#" @click.prevent="$emit('switch-form')">Register</a>
       </div>
+
+      <form @submit.prevent="handleSubmit">
+        <div class="input-container">
+          <span class="icon-box">
+            <i class="fas fa-user"></i>
+          </span>
+          <input
+            type="email"
+            v-model="email"
+            class="form-control"
+            placeholder="Email"
+          />
+        </div>
+
+        <div class="input-container">
+          <span class="icon-box">
+            <i class="fas fa-lock"></i>
+          </span>
+          <input
+            type="password"
+            v-model="password"
+            class="form-control"
+            placeholder="Contraseña"
+          />
+        </div>
+
+        <button type="submit" class="login-btn">INGRESAR</button>
+
+        <p v-if="error" class="error-message">{{ error }}</p>
+      </form>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import authService from '@/services/authService';
 
-const username = ref('')
-const password = ref('')
-const rememberMe = ref(false)
+const router = useRouter();
+const email = ref('');
+const password = ref('');
+const error = ref('');
+const isLoading = ref(false);
 
-const emit = defineEmits(['submit', 'switch-form', 'forgot-password'])
+const handleSubmit = async () => {
+  error.value = '';
+  isLoading.value = true;
+  
+  if (!email.value || !password.value) {
+    error.value = 'Por favor, complete todos los campos.';
+    isLoading.value = false;
+    return;
+  }
 
-const handleSubmit = () => {
-  emit('submit', {
-    username: username.value,
-    password: password.value,
-    rememberMe: rememberMe.value
-  })
-}
+  try {
+    const response = await authService.login(email.value, password.value);
+    
+    // Guardar token y datos del usuario
+    localStorage.setItem('token', response.token);
+    localStorage.setItem('user', JSON.stringify(response.usuario));
+    
+    // Redirigir al dashboard
+    router.push({ name: 'Dashboard' });
+    
+  } catch (err) {
+    error.value = err.message || 'Error en el inicio de sesión';
+    console.error('Error de login:', err);
+  } finally {
+    isLoading.value = false;
+  }
+};
 </script>
 
 <style scoped>
-.login-container {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #041428, #072142);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 360px;
+  background-color: rgba(15, 66, 107, 0.5);
+  border-radius: 28px;
+  padding: 40px 30px;
+  box-shadow: 0 0 30px rgba(0, 186, 255, 0.15);
+  border: 1px solid rgba(0, 195, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-box::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 100px;
+  height: 200px;
+  background: radial-gradient(ellipse at center, rgba(15, 51, 61, 0.4) 0%, rgba(15, 66, 107, 0) 70%);
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(10px);
+}
+
+.camera-icon-container {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.camera-icon-circle {
+  width: 90px;
+  height: 90px;
+  border: 2px solid rgba(0, 195, 255, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.camera-icon {
+  font-size: 35px;
+  color: rgba(0, 195, 255, 0.9);
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.icon-box {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.form-control {
+  background-color: rgb(6, 41, 59);
+  border: none;
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 45px;
+  width: 100%;
+  box-sizing: border-box;
+  color: white;
+  font-size: 15px;
+}
+
+.form-control::placeholder {
+  color: #a8b5c5;
+}
+
+.login-btn {
+  background-color: #0d4d81;
+  border: none;
+  color: white;
+  height: 50px;
+  border-radius: 8px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.login-btn:hover {
+  background-color: rgb(83, 173, 241);
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  font-size: 14px;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #f5f5f5;
-  padding: 20px;
-}
-
-.login-card {
-  width: 100%;
-  max-width: 400px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 40px;
-}
-
-.login-title {
-  text-align: center;
-  color: #333;
-  margin-bottom: 30px;
-  font-size: 28px;
-  font-weight: 600;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.form-group label {
-  font-size: 14px;
-  color: #555;
-  font-weight: 500;
-}
-
-.form-group input {
-  padding: 12px 16px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 14px;
-  transition: border-color 0.3s;
-}
-
-.form-group input:focus {
-  outline: none;
-  border-color: #646cff;
-}
-
-.form-options {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 5px;
-}
-
-.remember-me {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.remember-me input {
-  width: 16px;
-  height: 16px;
-}
-
-.remember-me label {
-  font-size: 13px;
-  color: #555;
-  cursor: pointer;
-}
-
-.forgot-password {
-  font-size: 13px;
-  color: #646cff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.forgot-password:hover {
-  color: #535bf2;
-  text-decoration: underline;
-}
-
-.login-button {
-  background-color: #646cff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 14px;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 10px;
-}
-
-.login-button:hover {
-  background-color: #535bf2;
-}
-
-.register-link {
-  text-align: center;
-  margin-top: 25px;
-  font-size: 14px;
-  color: #555;
-}
-
-.register-link a {
-  color: #646cff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.register-link a:hover {
-  color: #535bf2;
-  text-decoration: underline;
-}
-
-@media (max-width: 480px) {
-  .login-card {
-    padding: 30px 20px;
-  }
-  
-  .login-title {
-    font-size: 24px;
-    margin-bottom: 25px;
-  }
-  
-  .login-form {
-    gap: 16px;
-  }
+  z-index: 1000;
 }
 </style>

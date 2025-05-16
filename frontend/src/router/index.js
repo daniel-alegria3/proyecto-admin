@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import AuthView from '../views/AuthView.vue';
 import DashboardView from '../views/DashboardView.vue';
+import authService from '../services/authService';
 
 const routes = [
   {
@@ -8,6 +9,12 @@ const routes = [
     name: 'auth',
     component: AuthView,
     meta: { requiresGuest: true }, // Opcional: solo para usuarios no autenticados
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('@/views/LoginView.vue'), // Ruta corregida
+    meta: { requiresAuth: false }
   },
   {
     path: '/dashboard',
@@ -22,5 +29,16 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 });
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.requiresAuth && !authService.isAuthenticated()) {
+    next('/login');
+  } else if (to.path === '/login' && authService.isAuthenticated()) {
+    next('/dashboard');
+  } else {
+    next();
+  }
+});
+
 
 export default router;

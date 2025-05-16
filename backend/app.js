@@ -5,8 +5,14 @@ const cors = require('cors');
 const morgan = require('morgan');
 const { createLogger, format, transports } = require('winston');
 const db = require('./config/database');
-
+const loginRoute = require('./routes/authRoutes');
 const app = express();
+
+//Rutas para el CRUD
+const usuarioRoutes = require('./routes/usuarioRoutes');
+const proyectoRoutes = require('./routes/proyectoRoutes');
+
+
 
 // Logger configurado con Winston
 const logger = createLogger({
@@ -34,9 +40,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev', { stream: { write: message => logger.info(message.trim()) } }));
 
+
+
+// 📌 Rutas base
+//app.use('authRoutes', loginRoute); // <-- aquí registras tu ruta /login
+
 // Rutas base (vacías por ahora)
 app.get('/', (req, res) => {
-  res.json({ message: 'API funcionando correctamente 🚀' });
+  res.send('API funcionando correctamente');
 });
 
 // Middleware de errores (activo)
@@ -44,10 +55,11 @@ app.use((err, req, res, next) => {
   logger.error(`${err.status || 500} - ${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`);
   res.status(err.status || 500).json({
     error: {
-      message: err.message || 'Internal Server Error'
+      message: err.message || 'Algo salio mal'
     }
   });
 });
+
 
 // Servidor
 const PORT = process.env.PORT || 3000;

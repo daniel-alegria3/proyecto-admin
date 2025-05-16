@@ -30,3 +30,79 @@
 {"level":"info","message":"\u001b[0mGET /favicon.ico \u001b[33m404\u001b[0m 2.193 ms - 150\u001b[0m","timestamp":"2025-05-08T03:04:06.705Z"}
 {"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-11T04:00:03.656Z"}
 {"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-11T05:13:25.307Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-15T05:51:06.669Z"}
+{"level":"error","message":"500 - loginRoute is not defined - / - GET - ::1","timestamp":"2025-05-15T05:51:12.044Z"}
+{"level":"info","message":"\u001b[0mGET / \u001b[31m500\u001b[0m 5.328 ms - 49\u001b[0m","timestamp":"2025-05-15T05:51:12.054Z"}
+{"level":"info","message":"\u001b[0mGET /favicon.ico \u001b[33m404\u001b[0m 1.897 ms - 150\u001b[0m","timestamp":"2025-05-15T05:51:12.361Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-15T05:51:28.057Z"}
+{"level":"error","message":"500 - loginRoute is not defined - / - GET - ::1","timestamp":"2025-05-15T05:51:31.936Z"}
+{"level":"info","message":"\u001b[0mGET / \u001b[31m500\u001b[0m 3.405 ms - 49\u001b[0m","timestamp":"2025-05-15T05:51:31.941Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-15T05:53:07.373Z"}
+{"level":"error","message":"500 - loginRoute is not defined - / - GET - ::1","timestamp":"2025-05-15T05:53:10.250Z"}
+{"level":"info","message":"\u001b[0mGET / \u001b[31m500\u001b[0m 2.366 ms - 49\u001b[0m","timestamp":"2025-05-15T05:53:10.254Z"}
+{"level":"error","message":"500 - loginRoute is not defined - / - GET - ::1","timestamp":"2025-05-15T05:53:10.951Z"}
+{"level":"info","message":"\u001b[0mGET / \u001b[31m500\u001b[0m 0.859 ms - 49\u001b[0m","timestamp":"2025-05-15T05:53:10.952Z"}
+{"level":"error","message":"500 - loginRoute is not defined - / - GET - ::1","timestamp":"2025-05-15T05:53:11.113Z"}
+{"level":"info","message":"\u001b[0mGET / \u001b[31m500\u001b[0m 0.967 ms - 49\u001b[0m","timestamp":"2025-05-15T05:53:11.114Z"}
+{"level":"error","message":"500 - loginRoute is not defined - / - GET - ::1","timestamp":"2025-05-15T05:53:11.279Z"}
+{"level":"info","message":"\u001b[0mGET / \u001b[31m500\u001b[0m 0.837 ms - 49\u001b[0m","timestamp":"2025-05-15T05:53:11.280Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-15T05:53:54.473Z"}
+{"level":"error","message":"500 - loginRoute is not defined - / - GET - ::1","timestamp":"2025-05-15T05:53:57.018Z"}
+{"level":"info","message":"\u001b[0mGET / \u001b[31m500\u001b[0m 2.379 ms - 49\u001b[0m","timestamp":"2025-05-15T05:53:57.022Z"}
+{"level":"error","message":"500 - loginRoute is not defined - / - GET - ::1","timestamp":"2025-05-15T05:53:58.177Z"}
+{"level":"info","message":"\u001b[0mGET / \u001b[31m500\u001b[0m 0.877 ms - 49\u001b[0m","timestamp":"2025-05-15T05:53:58.179Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-15T05:59:35.785Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-15T05:59:38.091Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-15T06:01:45.730Z"}
+{"level":"info","message":"\u001b[0mGET / \u001b[32m200\u001b[0m 1.955 ms - 29\u001b[0m","timestamp":"2025-05-15T06:01:48.873Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.853 ms - 145\u001b[0m","timestamp":"2025-05-15T06:06:30.780Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-15T20:55:21.846Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-15T20:55:22.556Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 1.371 ms - 145\u001b[0m","timestamp":"2025-05-15T21:08:06.519Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.238 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:26.153Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.276 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:27.051Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.299 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:27.230Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.228 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:27.401Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.230 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:27.584Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.243 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:27.999Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.154 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:28.178Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.453 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:28.362Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.407 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:33.386Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.162 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:33.832Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.305 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:33.996Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.189 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:34.172Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 1.943 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:34.345Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.208 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:34.496Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.263 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:34.779Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.253 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:34.950Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.148 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:35.125Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.240 ms - 154\u001b[0m","timestamp":"2025-05-15T21:12:35.305Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.311 ms - 154\u001b[0m","timestamp":"2025-05-15T21:13:37.226Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.136 ms - 154\u001b[0m","timestamp":"2025-05-15T21:13:37.673Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.226 ms - 154\u001b[0m","timestamp":"2025-05-15T21:13:37.842Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.145 ms - 154\u001b[0m","timestamp":"2025-05-15T21:13:38.028Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.160 ms - 154\u001b[0m","timestamp":"2025-05-15T21:13:51.308Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.134 ms - 154\u001b[0m","timestamp":"2025-05-15T21:13:56.512Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.150 ms - 154\u001b[0m","timestamp":"2025-05-15T21:13:57.466Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.134 ms - 154\u001b[0m","timestamp":"2025-05-15T21:13:57.657Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.155 ms - 154\u001b[0m","timestamp":"2025-05-15T21:13:57.829Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.132 ms - 154\u001b[0m","timestamp":"2025-05-15T21:13:58.022Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.219 ms - 154\u001b[0m","timestamp":"2025-05-15T21:13:58.355Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.137 ms - 154\u001b[0m","timestamp":"2025-05-15T21:13:58.548Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.124 ms - 154\u001b[0m","timestamp":"2025-05-15T21:13:58.738Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.208 ms - 154\u001b[0m","timestamp":"2025-05-15T21:13:58.943Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/login \u001b[33m404\u001b[0m 0.180 ms - 154\u001b[0m","timestamp":"2025-05-15T21:14:10.140Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.279 ms - 145\u001b[0m","timestamp":"2025-05-15T21:17:24.478Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.497 ms - 145\u001b[0m","timestamp":"2025-05-15T21:17:39.170Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/loginForm \u001b[33m404\u001b[0m 0.158 ms - 158\u001b[0m","timestamp":"2025-05-15T21:17:43.220Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/loginForm \u001b[33m404\u001b[0m 0.160 ms - 158\u001b[0m","timestamp":"2025-05-15T21:17:43.991Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/loginForm \u001b[33m404\u001b[0m 0.224 ms - 158\u001b[0m","timestamp":"2025-05-15T21:18:04.764Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/loginForm \u001b[33m404\u001b[0m 0.180 ms - 158\u001b[0m","timestamp":"2025-05-15T21:18:05.380Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/loginForm \u001b[33m404\u001b[0m 0.140 ms - 158\u001b[0m","timestamp":"2025-05-15T21:18:05.567Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/loginForm \u001b[33m404\u001b[0m 0.134 ms - 158\u001b[0m","timestamp":"2025-05-15T21:18:05.764Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/loginForm \u001b[33m404\u001b[0m 0.129 ms - 158\u001b[0m","timestamp":"2025-05-15T21:18:06.104Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/loginForm \u001b[33m404\u001b[0m 0.118 ms - 158\u001b[0m","timestamp":"2025-05-15T21:18:06.328Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/loginForm \u001b[33m404\u001b[0m 0.120 ms - 158\u001b[0m","timestamp":"2025-05-15T21:18:06.500Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.361 ms - 145\u001b[0m","timestamp":"2025-05-15T21:20:05.431Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.838 ms - 145\u001b[0m","timestamp":"2025-05-15T21:30:08.983Z"}
+{"level":"info","message":"\u001b[0mPOST /api/auth/loginForm \u001b[33m404\u001b[0m 0.162 ms - 158\u001b[0m","timestamp":"2025-05-15T21:30:15.166Z"}
