@@ -421,3 +421,40 @@
 {"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 20.725 ms - -\u001b[0m","timestamp":"2025-05-17T07:26:20.646Z"}
 {"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-17T07:28:26.279Z"}
 {"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-17T07:29:14.696Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 1.068 ms - 145\u001b[0m","timestamp":"2025-05-17T07:29:18.830Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 17.709 ms - -\u001b[0m","timestamp":"2025-05-17T07:29:18.835Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 1.592 ms - -\u001b[0m","timestamp":"2025-05-17T07:30:43.262Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 1.068 ms - -\u001b[0m","timestamp":"2025-05-17T07:30:43.269Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 1.472 ms - -\u001b[0m","timestamp":"2025-05-17T07:30:45.667Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.378 ms - 145\u001b[0m","timestamp":"2025-05-17T07:30:45.671Z"}
+{"level":"info","message":"\u001b[0mPUT /tareas/20 \u001b[32m200\u001b[0m 2.974 ms - 31\u001b[0m","timestamp":"2025-05-17T07:31:26.073Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[32m200\u001b[0m 1.074 ms - 737\u001b[0m","timestamp":"2025-05-17T07:31:26.079Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 1.156 ms - -\u001b[0m","timestamp":"2025-05-17T07:31:33.266Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 1.000 ms - -\u001b[0m","timestamp":"2025-05-17T07:31:35.266Z"}
+{"level":"info","message":"\u001b[0mPOST /tareas \u001b[32m201\u001b[0m 2.568 ms - 34\u001b[0m","timestamp":"2025-05-17T07:32:08.787Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[32m200\u001b[0m 1.019 ms - 923\u001b[0m","timestamp":"2025-05-17T07:32:08.793Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 1.645 ms - -\u001b[0m","timestamp":"2025-05-17T07:35:19.300Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.579 ms - 145\u001b[0m","timestamp":"2025-05-17T07:35:19.307Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 1.446 ms - -\u001b[0m","timestamp":"2025-05-17T07:35:56.440Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.399 ms - 145\u001b[0m","timestamp":"2025-05-17T07:35:56.446Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.162 ms - 145\u001b[0m","timestamp":"2025-05-17T07:36:04.307Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.137 ms - 145\u001b[0m","timestamp":"2025-05-17T07:36:10.137Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 0.915 ms - -\u001b[0m","timestamp":"2025-05-17T07:36:10.139Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 3.085 ms - -\u001b[0m","timestamp":"2025-05-17T07:36:26.417Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-17T13:09:21.058Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 1.188 ms - 145\u001b[0m","timestamp":"2025-05-17T13:09:37.496Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 1.039 ms - 145\u001b[0m","timestamp":"2025-05-17T13:09:44.060Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 18.380 ms - -\u001b[0m","timestamp":"2025-05-17T13:09:44.076Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.137 ms - 145\u001b[0m","timestamp":"2025-05-17T13:11:17.548Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.217 ms - 145\u001b[0m","timestamp":"2025-05-17T13:11:31.948Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 1.439 ms - -\u001b[0m","timestamp":"2025-05-17T13:11:31.951Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 1.101 ms - -\u001b[0m","timestamp":"2025-05-17T13:11:44.950Z"}
+{"level":"info","message":"\u001b[0mPUT /tareas/20 \u001b[32m200\u001b[0m 4.031 ms - 31\u001b[0m","timestamp":"2025-05-17T13:12:00.098Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[32m200\u001b[0m 1.335 ms - 927\u001b[0m","timestamp":"2025-05-17T13:12:00.104Z"}
+{"level":"info","message":"\u001b[0mDELETE /tareas/20 \u001b[32m200\u001b[0m 5.524 ms - 29\u001b[0m","timestamp":"2025-05-17T13:12:05.257Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[32m200\u001b[0m 3.168 ms - 737\u001b[0m","timestamp":"2025-05-17T13:12:05.272Z"}
+{"level":"info","message":"\u001b[0mPOST /tareas \u001b[32m201\u001b[0m 7.260 ms - 34\u001b[0m","timestamp":"2025-05-17T13:12:18.782Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[32m200\u001b[0m 1.181 ms - 917\u001b[0m","timestamp":"2025-05-17T13:12:18.788Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.432 ms - 145\u001b[0m","timestamp":"2025-05-17T13:14:55.232Z"}
+{"level":"info","message":"\u001b[0mGET /tareas \u001b[36m304\u001b[0m 1.733 ms - -\u001b[0m","timestamp":"2025-05-17T13:15:37.479Z"}
+{"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.139 ms - 145\u001b[0m","timestamp":"2025-05-17T13:15:37.480Z"}
