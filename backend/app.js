@@ -11,7 +11,7 @@ const app = express();
 //Rutas para el CRUD
 const usuarioRoutes = require('./routes/usuarioRoutes');
 const proyectoRoutes = require('./routes/proyectoRoutes');
-
+const tareaRoutes = require('./routes/tareaRoutes'); // 👉 Agregado para tareas
 
 
 // Logger configurado con Winston
@@ -44,6 +44,10 @@ app.use(morgan('dev', { stream: { write: message => logger.info(message.trim()) 
 
 // 📌 Rutas base
 //app.use('authRoutes', loginRoute); // <-- aquí registras tu ruta /login
+app.use('/usuarios', usuarioRoutes);
+app.use('/proyectos', proyectoRoutes);
+app.use('/tareas', tareaRoutes); // 👉 Aquí se monta la ruta de tareas
+
 
 // Rutas base (vacías por ahora)
 app.get('/', (req, res) => {

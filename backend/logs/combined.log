@@ -106,3 +106,15 @@
 {"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.361 ms - 145\u001b[0m","timestamp":"2025-05-15T21:20:05.431Z"}
 {"level":"info","message":"\u001b[0mPOST /login \u001b[33m404\u001b[0m 0.838 ms - 145\u001b[0m","timestamp":"2025-05-15T21:30:08.983Z"}
 {"level":"info","message":"\u001b[0mPOST /api/auth/loginForm \u001b[33m404\u001b[0m 0.162 ms - 158\u001b[0m","timestamp":"2025-05-15T21:30:15.166Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-17T00:00:50.696Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-17T02:29:27.221Z"}
+{"level":"info","message":"\u001b[0mGET / \u001b[32m200\u001b[0m 8.559 ms - 29\u001b[0m","timestamp":"2025-05-17T02:29:45.756Z"}
+{"level":"info","message":"\u001b[0mGET /favicon.ico \u001b[33m404\u001b[0m 4.063 ms - 150\u001b[0m","timestamp":"2025-05-17T02:29:46.171Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-17T02:41:13.232Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-17T02:42:07.328Z"}
+{"level":"info","message":"\u001b[0mGET /tareas/proyecto/3 \u001b[33m404\u001b[0m 2.677 ms - 156\u001b[0m","timestamp":"2025-05-17T02:51:23.429Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-17T02:53:12.411Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-17T02:53:16.261Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-17T02:58:40.209Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-17T02:59:53.019Z"}
+{"level":"info","message":"Servidor corriendo en el puerto 3000","timestamp":"2025-05-17T03:03:49.241Z"}

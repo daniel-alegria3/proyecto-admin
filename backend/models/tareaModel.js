@@ -25,6 +25,11 @@ class Tarea {
     await pool.query('DELETE FROM tareas WHERE id_tarea = ?', [id]);
   }
 
+  static async getAll() {
+    const [rows] = await pool.query('SELECT * FROM tareas');
+    return rows;
+  }
+
   static async getByProyecto(id_proyecto) {
     const [rows] = await pool.query('SELECT * FROM tareas WHERE id_proyecto = ?', [id_proyecto]);
     return rows;
@@ -35,3 +40,5 @@ class Tarea {
     return rows;
   }
 }
+
+module.exports = Tarea;
