@@ -14,10 +14,10 @@ class Tarea {
     return rows[0];
   }
 
-  static async update(id, { titulo, descripcion, fecha_inicio, fecha_fin, id_usuario_asignado }) {
+  static async update(id, { titulo, descripcion, fecha_inicio, fecha_fin, id_proyecto, id_usuario_asignado }) {
     await pool.query(
-      'UPDATE tareas SET titulo = ?, descripcion = ?, fecha_inicio = ?, fecha_fin = ?, id_usuario_asignado = ? WHERE id_tarea = ?',
-      [titulo, descripcion, fecha_inicio, fecha_fin, id_usuario_asignado, id]
+      'UPDATE tareas SET titulo = ?, descripcion = ?, fecha_inicio = ?, fecha_fin = ?, id_proyecto = ? WHERE id_tarea = ?',
+      [titulo, descripcion, fecha_inicio, fecha_fin, id_proyecto, id]
     );
   }
 

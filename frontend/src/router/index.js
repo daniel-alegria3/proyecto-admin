@@ -3,6 +3,7 @@ import AuthView from '../views/AuthView.vue';
 import DashboardView from '../views/DashboardView.vue';
 import authService from '../services/authService';
 
+import TareasView from '../views/TareasView.vue'
 const routes = [
   {
     path: '/',
@@ -13,7 +14,7 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: () => import('@/views/LoginView.vue'), // Ruta corregida
+    component: () => import('../views/LoginView.vue'), // Ruta corregida
     meta: { requiresAuth: false }
   },
   {
@@ -23,6 +24,15 @@ const routes = [
     meta: { requiresAuth: true }, // Protege esta ruta
   },
   // ... otras rutas (ProjectsView, etc.)
+  {
+    //path: '/tareas/:id',
+    path: '/tareas',
+    name: 'Tareas',
+    component: TareasView,
+    props: true
+  //meta: { requiresAuth: true } 
+  },
+  
 ];
 
 const router = createRouter({

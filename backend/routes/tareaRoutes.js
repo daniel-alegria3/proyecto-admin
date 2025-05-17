@@ -8,5 +8,6 @@ router.get('/:id', tareaController.obtenerTarea);
 router.post('/', tareaController.crearTarea);
 router.put('/:id', tareaController.actualizarTarea);
 router.delete('/:id', tareaController.eliminarTarea);
+router.put('/:id', tareaController.actualizarTarea);
 
 module.exports = router;

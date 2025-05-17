@@ -1,21 +1,24 @@
 require('dotenv').config();
 const mysql = require('mysql2');
 
-// Crear la conexión utilizando las variables del archivo .env
-const connection = mysql.createConnection({
+// Usamos createPool y activamos el modo promesa
+const pool = mysql.createPool({
   host: process.env.DB_HOST, // Lee desde .env
-  user: process.env.DB_USER, // Lee desde .env
-  password: process.env.DB_PASSWORD, // Lee desde .env
-  database: process.env.DB_NAME // Lee desde .env
-});
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0
+}).promise(); // <<--- ¡Importante para usar await!
 
-// Verificar la conexión
-connection.connect((err) => {
-  if (err) {
-    console.error('Error de conexión a la base de datos:', err.stack);
-  } else {
+// Solo mensaje de conexión
+pool.getConnection()
+  .then(() => {
     console.log('Conectado a la base de datos MySQL');
-  }
-});
+  })
+  .catch(err => {
+    console.error('Error de conexión a la base de datos:', err.stack);
+  });
 
-module.exports = connection;
+module.exports = pool;

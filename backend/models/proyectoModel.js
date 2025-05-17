@@ -10,9 +10,10 @@ class Proyecto {
   }
 
   static async findById(id) {
-    const [rows] = await pool.query('SELECT * FROM proyectos WHERE id_proyecto = ?', [id]);
-    return rows[0];
+    const [rows] = await pool.query('SELECT * FROM tareas WHERE id_tarea = ?', [id]);
+    return rows[0];  // Devuelve un objeto con los datos de la tarea
   }
+  
 
   static async update(id, { titulo, descripcion, fecha_inicio, fecha_fin, id_responsable }) {
     await pool.query(

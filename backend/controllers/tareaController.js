@@ -33,11 +33,21 @@ exports.obtenerTarea = async (req, res) => {
   try {
     const tarea = await Tarea.findById(req.params.id);
     if (!tarea) return res.status(404).json({ error: 'Tarea no encontrada' });
-    res.json(tarea);
+
+    // Formatear las fechas para inputs date
+    const tareaFormateada = {
+      ...tarea,
+      fecha_inicio: tarea.fecha_inicio ? tarea.fecha_inicio.toISOString().split('T')[0] : null,
+      fecha_fin: tarea.fecha_fin ? tarea.fecha_fin.toISOString().split('T')[0] : null,
+    };
+
+    res.json(tareaFormateada);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 };
+
+
 
 // Crear una tarea
 exports.crearTarea = async (req, res) => {
