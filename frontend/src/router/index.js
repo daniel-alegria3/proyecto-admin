@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import AuthView from '../views/AuthView.vue';
-import DashboardView from '../views/DashboardView.vue';
-import authService from '../services/authService';
+import AuthView from '@/views/AuthView.vue';
+import DashboardView from '@/views/DashboardView.vue';
+import authService from '@/services/authService';
 
-import TareasView from '../views/TareasView.vue'
+import TareasView from '@/views/TareasView.vue'
 const routes = [
   {
     path: '/',
@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: () => import('../views/LoginView.vue'), // Ruta corregida
+    component: () => import('@/views/LoginView.vue'), // Ruta corregida
     meta: { requiresAuth: false }
   },
   {
@@ -30,9 +30,9 @@ const routes = [
     name: 'Tareas',
     component: TareasView,
     props: true
-  //meta: { requiresAuth: true } 
+  //meta: { requiresAuth: true }
   },
-  
+
 ];
 
 const router = createRouter({
