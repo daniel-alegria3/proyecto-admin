@@ -1,35 +1,28 @@
-import api from '@/utils/api';
+import axios from 'axios';
 
 export default {
-  async login(email, password) {
+  async getCurrentUser() {
     try {
-      const response = await api.post('/auth/loginForm', { email, password });
-      return response.data;
+      const response = await axios.post('/users/logged_in');
+      return response.data.id_usuario
     } catch (error) {
       throw error.response ? error.response.data : error;
+      return false;
     }
   },
 
-  async register(userData) {
+  async isAuthenticated() {
+    return true;
     try {
-      const response = await api.post('/auth/register', userData);
-      return response.data;
+      const response = await axios.post('/users/logged_in');
+      if (response.data.loggedIn) {
+        return true;
+      } else {
+        return false;
+      }
     } catch (error) {
       throw error.response ? error.response.data : error;
+      return false;
     }
   },
-
-  getCurrentUser() {
-    const user = localStorage.getItem('user');
-    return user ? JSON.parse(user) : null;
-  },
-
-  isAuthenticated() {
-    return !!localStorage.getItem('token');
-  },
-
-  logout() {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
-  }
 };

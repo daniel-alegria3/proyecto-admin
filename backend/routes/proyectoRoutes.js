@@ -1,13 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const proyectoController = require('../controllers/proyectoController');
-const authMiddleware = require('../middlewares/authMiddleware');
 
-router.get('/', authMiddleware, proyectoController.getAll);
-router.get('/:id', authMiddleware, proyectoController.getById);
-router.post('/', authMiddleware, proyectoController.create);
-router.put('/:id', authMiddleware, proyectoController.update);
-router.delete('/:id', authMiddleware, proyectoController.delete);
-router.get('/responsable/:id', authMiddleware, proyectoController.getByResponsable);
+router.get('/', proyectoController.getAll);
+router.get('/:id', proyectoController.getById);
+router.post('/', proyectoController.create);
+router.put('/:id', proyectoController.update);
+router.delete('/:id', proyectoController.delete);
+router.get('/responsable/:id', proyectoController.getByResponsable);
 
 module.exports = router;

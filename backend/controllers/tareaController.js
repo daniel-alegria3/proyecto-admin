@@ -2,6 +2,11 @@ const Tarea = require('../models/tareaModel');
 
 // Listar todas las tareas o filtrar por proyecto si se pasa ?id_proyecto=
 // Si no hay id_proyecto, devuelve todas las tareas
+exports.getAll = async (req, res) => {
+  let tareas = await Tarea.getAll();
+  res.json(tareas);
+}
+
 exports.listarTareas = async (req, res) => {
   try {
     const id_proyecto = req.query.id_proyecto;

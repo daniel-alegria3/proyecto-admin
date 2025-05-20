@@ -12,15 +12,15 @@ app.use(router)
 
 app.mount('#app')
 
-import axios from 'axios';
-
-axios.post('http://localhost:3000/login', {
-  email: 'correo@ejemplo.com',
-  password: '123456'
-})
-.then(response => {
-  console.log(response.data);
-})
-.catch(error => {
-  console.error(error);
-});
+// import axios from 'axios';
+//
+// axios.post('http://localhost:3000/login', {
+//   email: 'correo@ejemplo.com',
+//   password: '123456'
+// })
+// .then(response => {
+//   console.log(response.data);
+// })
+// .catch(error => {
+//   console.error(error);
+// });

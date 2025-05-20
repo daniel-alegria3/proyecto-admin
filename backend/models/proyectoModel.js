@@ -1,4 +1,5 @@
 const pool = require('../config/database');
+const proyectoController = require('../controllers/proyectoController');
 
 class Proyecto {
   static async create({ titulo, descripcion, fecha_inicio, fecha_fin, id_responsable }) {
@@ -13,7 +14,7 @@ class Proyecto {
     const [rows] = await pool.query('SELECT * FROM tareas WHERE id_tarea = ?', [id]);
     return rows[0];  // Devuelve un objeto con los datos de la tarea
   }
-  
+
 
   static async update(id, { titulo, descripcion, fecha_inicio, fecha_fin, id_responsable }) {
     await pool.query(
@@ -23,7 +24,7 @@ class Proyecto {
   }
 
   static async delete(id) {
-    await pool.query('DELETE FROM proyectos WHERE id_proyecto = ?', [id]);
+    await pool.query('CALL eliminar_proyecto(?)', [id]);
   }
 
   static async getAll() {
@@ -36,3 +37,5 @@ class Proyecto {
     return rows;
   }
 }
+module.exports = Proyecto;
+

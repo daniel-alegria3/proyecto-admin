@@ -22,7 +22,7 @@ class Tarea {
   }
 
   static async delete(id) {
-    await pool.query('DELETE FROM tareas WHERE id_tarea = ?', [id]);
+    await pool.query('CALL eliminar_tarea(?)', [id]);
   }
 
   static async getAll() {

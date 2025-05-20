@@ -35,7 +35,10 @@ if (process.env.NODE_ENV !== 'production') {
 
 // Middlewares globales
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173', // don't use '*'
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev', { stream: { write: message => logger.info(message.trim()) } }));
@@ -44,9 +47,7 @@ app.use(morgan('dev', { stream: { write: message => logger.info(message.trim()) 
 
 // 📌 Rutas base
 //app.use('authRoutes', loginRoute); // <-- aquí registras tu ruta /login
-app.use('/usuarios', usuarioRoutes);
-app.use('/proyectos', proyectoRoutes);
-app.use('/tareas', tareaRoutes); // 👉 Aquí se monta la ruta de tareas
+app.use('/users', usuarioRoutes);
 
 
 // Rutas base (vacías por ahora)

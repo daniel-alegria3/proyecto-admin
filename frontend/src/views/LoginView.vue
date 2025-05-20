@@ -5,15 +5,53 @@
       <div class="icono">
         <i class="fas fa-camera"></i>
       </div>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Contraseña" />
-      <button>INGRESAR</button>
-      
+      <input type="email" placeholder="Email" v-model="email"/>
+      <input type="password" placeholder="Contraseña" v-model="password"/>
+      <button @click="handleSubmit">INGRESAR</button>
+
+      <p v-if="error" class="error-message">{{ error }}</p>
     </div>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+//import authService from '@/services/authService';
+import axios from 'axios';
+
+const router = useRouter();
+const email = ref('');
+const password = ref('');
+const error = ref('');
+const isLoading = ref(false);
+
+const handleSubmit = async () => {
+  error.value = '';
+  isLoading.value = true;
+
+  if (!email.value || !password.value) {
+    error.value = 'Por favor, complete todos los campos.';
+    isLoading.value = false;
+    return;
+  }
+
+  try {
+    //const response = await authService.login(email.value, password.value);
+
+    //const res = await axios.post('http://localhost:3000/users/login', {
+    //    email: email.value, contraseña: password.value
+    //}, { withCredentials: true });
+    // Redirigir al dashboard
+    router.push({ path: `/projects/${id}` })
+
+  } catch (err) {
+    error.value = err.message || 'Error en el inicio de sesión';
+    console.error('Error de login:', err);
+  } finally {
+    isLoading.value = false;
+  }
+};
 </script>
 
 <style scoped>
